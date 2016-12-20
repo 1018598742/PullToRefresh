@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--有6个参数可配置:-->
+
+    <!--阻尼系数-->
+    <!--默认: 1.7f，越大，感觉下拉时越吃力。-->
+    <!--触发刷新时移动的位置比例-->
+    <!--默认，1.2f，移动达到头部高度1.2倍时可触发刷新操作。-->
+    <!--回弹延时-->
+    <!--默认 200ms，回弹到刷新高度所用时间-->
+    <!--头部回弹时间-->
+    <!--默认1000ms-->
+    <!--刷新是保持头部-->
+    <!--默认值 true.-->
+    <!--下拉刷新 / 释放刷新-->
+    <!--默认为释放刷新-->
+    <com.example.pulltoref.jingdong.JdRefreshLayout
+        android:id="@+id/tes_list_recyview_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ptr_resistance="2"
+        app:ptr_ratio_of_header_height_to_refresh="1.2"
+        app:ptr_duration_to_close="100"
+        app:ptr_duration_to_close_header="500"
+        app:ptr_keep_header_when_refresh="true"
+        app:ptr_pull_to_fresh="false"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/testRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.example.pulltoref.jingdong.JdRefreshLayout>
+</LinearLayout>
