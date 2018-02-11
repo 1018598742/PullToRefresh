@@ -19,13 +19,11 @@ public class TmallRefreshLayout extends PtrFrameLayout {
      TmallRefreshHeader mHeaderView;
 
     public TmallRefreshLayout(Context context) {
-        super(context);
-        initView();
+        this(context,null);
     }
 
     public TmallRefreshLayout(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        initView();
+        this(context, attrs,0);
     }
 
     public TmallRefreshLayout(Context context, AttributeSet attrs, int defStyle) {
